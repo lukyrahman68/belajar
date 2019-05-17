@@ -1,13 +1,15 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableHighlight } from 'react-native';
 
 const ListItem = (props) => {
     return (
-        <View style={styles.listItem}>
-            <Text>
-                {props.text}
-            </Text>
-        </View>
+        <TouchableHighlight onPress= {props.onPress}>
+            <View style={styles.listItem}>
+                <Text>
+                    {props.text}
+                </Text>
+            </View>
+        </TouchableHighlight>
     );
 };
 
